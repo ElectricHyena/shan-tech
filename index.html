@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shan Tech Services - Websites & Tech Help for Local Businesses</title>
+    <meta name="description" content="Simple, affordable websites and tech services for local businesses. From just £39/month. 12-month commitment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --clay-bg: #F4F1FA;
+            --clay-foreground: #332F3A;
+            --clay-muted: #635F69;
+            --clay-accent: #7C3AED;
+            --clay-accent-alt: #DB2777;
+            --clay-tertiary: #0EA5E9;
+            --clay-success: #10B981;
+            --clay-warning: #F59E0B;
+            --clay-card-bg: rgba(255, 255, 255, 0.7);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--clay-bg);
+            color: var(--clay-foreground);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Floating Background Blobs */
+        .blob-container {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+
+        .blob-1 {
+            width: 60vh;
+            height: 60vh;
+            background: var(--clay-accent);
+            top: -10%;
+            left: -10%;
+            animation: clay-float 8s ease-in-out infinite;
+        }
+
+        .blob-2 {
+            width: 50vh;
+            height: 50vh;
+            background: var(--clay-accent-alt);
+            top: 20%;
+            right: -15%;
+            animation: clay-float-delayed 10s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .blob-3 {
+            width: 45vh;
+            height: 45vh;
+            background: var(--clay-tertiary);
+            bottom: 10%;
+            left: 20%;
+            animation: clay-float 12s ease-in-out infinite;
+            animation-delay: 4s;
+        }
+
+        @keyframes clay-float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        @keyframes clay-float-delayed {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(-2deg); }
+        }
+
+        @keyframes clay-breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        /* Header */
+        header {
+            padding: 16px;
+            position: sticky;
+            top: 16px;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 32px;
+            padding: 12px 16px;
+            box-shadow:
+                16px 16px 32px rgba(160, 150, 180, 0.15),
+                -10px -10px 24px rgba(255, 255, 255, 0.7);
+        }
+
+        .menu-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: transparent;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 200ms ease;
+        }
+
+        .menu-btn:hover {
+            background: rgba(124, 58, 237, 0.1);
+        }
+
+        .menu-btn:active {
+            transform: scale(0.92);
+        }
+
+        .menu-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--clay-foreground);
+        }
+
+        .logo {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--clay-foreground);
+            text-decoration: none;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--clay-accent), var(--clay-accent-alt));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #A78BFA, var(--clay-accent));
+            color: white;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 200ms ease;
+            box-shadow:
+                8px 8px 16px rgba(139, 92, 246, 0.25),
+                -4px -4px 8px rgba(255, 255, 255, 0.3);
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                12px 12px 24px rgba(139, 92, 246, 0.35),
+                -6px -6px 12px rgba(255, 255, 255, 0.4);
+        }
+
+        .header-cta:active {
+            transform: scale(0.92);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 32px 16px 48px;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 48px;
+            padding: 40px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                20px 20px 40px rgba(160, 150, 180, 0.2),
+                -15px -15px 30px rgba(255, 255, 255, 0.8),
+                inset 8px 8px 16px rgba(139, 92, 246, 0.03),
+                inset -8px -8px 16px rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(219, 39, 119, 0.1));
+            color: var(--clay-accent);
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 28px;
+            box-shadow:
+                inset 6px 6px 12px rgba(255, 255, 255, 0.5),
+                inset -6px -6px 12px rgba(139, 92, 246, 0.1);
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, var(--clay-accent), var(--clay-accent-alt));
+            border-radius: 50%;
+            animation: clay-breathe 2s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--clay-foreground);
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--clay-foreground) 20%, var(--clay-accent) 60%, var(--clay-accent-alt));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--clay-muted);
+            margin-bottom: 36px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #A78BFA, var(--clay-accent));
+            color: white;
+            padding: 18px 32px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 200ms ease;
+            box-shadow:
+                12px 12px 24px rgba(139, 92, 246, 0.3),
+                -8px -8px 16px rgba(255, 255, 255, 0.4),
+                inset 4px 4px 8px rgba(255, 255, 255, 0.3),
+                inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                16px 16px 32px rgba(139, 92, 246, 0.4),
+                -10px -10px 20px rgba(255, 255, 255, 0.5),
+                inset 4px 4px 8px rgba(255, 255, 255, 0.3),
+                inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.92);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--clay-accent);
+            padding: 18px 32px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 200ms ease;
+            box-shadow:
+                12px 12px 24px rgba(160, 150, 180, 0.2),
+                -8px -8px 16px rgba(255, 255, 255, 0.6),
+                inset 4px 4px 8px rgba(255, 255, 255, 0.8),
+                inset -4px -4px 8px rgba(160, 150, 180, 0.1);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-4px);
+            background: white;
+        }
+
+        .btn-secondary:active {
+            transform: scale(0.92);
+        }
+
+        .btn-secondary svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--clay-accent);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 0 16px 48px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 24px 16px;
+            text-align: center;
+            transition: all 300ms ease;
+            box-shadow:
+                12px 12px 24px rgba(160, 150, 180, 0.15),
+                -8px -8px 16px rgba(255, 255, 255, 0.7),
+                inset 4px 4px 8px rgba(255, 255, 255, 0.6),
+                inset -4px -4px 8px rgba(160, 150, 180, 0.05);
+            animation: clay-breathe 6s ease-in-out infinite;
+        }
+
+        .stat-card:nth-child(2) { animation-delay: 1s; }
+        .stat-card:nth-child(3) { animation-delay: 2s; }
+        .stat-card:nth-child(4) { animation-delay: 3s; }
+
+        .stat-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow:
+                20px 20px 40px rgba(160, 150, 180, 0.25),
+                -12px -12px 24px rgba(255, 255, 255, 0.8);
+        }
+
+        .stat-number {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--clay-accent), var(--clay-accent-alt));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--clay-muted);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 48px 16px;
+        }
+
+        .section-title {
+            font-family: 'Nunito', sans-serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+            color: var(--clay-foreground);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--clay-muted);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 32px;
+            padding: 32px 24px;
+            text-decoration: none;
+            display: block;
+            transition: all 300ms ease;
+            box-shadow:
+                16px 16px 32px rgba(160, 150, 180, 0.2),
+                -10px -10px 24px rgba(255, 255, 255, 0.9),
+                inset 6px 6px 12px rgba(139, 92, 246, 0.03),
+                inset -6px -6px 12px rgba(255, 255, 255, 1);
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                24px 24px 48px rgba(160, 150, 180, 0.3),
+                -16px -16px 32px rgba(255, 255, 255, 1);
+        }
+
+        .service-card:active {
+            transform: scale(0.98);
+        }
+
+        .service-card.tier-1 .service-icon { background: linear-gradient(135deg, #7DD3FC, var(--clay-tertiary)); }
+        .service-card.tier-2 .service-icon { background: linear-gradient(135deg, #A78BFA, var(--clay-accent)); }
+        .service-card.tier-3 .service-icon { background: linear-gradient(135deg, #F472B6, var(--clay-accent-alt)); }
+        .service-card.tier-4 .service-icon { background: linear-gradient(135deg, #FBBF24, var(--clay-warning)); }
+        .service-card.tier-5 .service-icon { background: linear-gradient(135deg, #6EE7B7, var(--clay-success)); }
+
+        .service-card.popular {
+            background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(219, 39, 119, 0.08));
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: linear-gradient(135deg, var(--clay-accent), var(--clay-accent-alt));
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 4px 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            box-shadow:
+                8px 8px 16px rgba(139, 92, 246, 0.25),
+                -4px -4px 8px rgba(255, 255, 255, 0.4);
+            transition: all 300ms ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-card h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--clay-foreground);
+        }
+
+        .service-price {
+            font-family: 'Nunito', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--clay-accent), var(--clay-accent-alt));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+
+        .service-price-note {
+            font-size: 0.8125rem;
+            color: var(--clay-muted);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .service-tagline {
+            font-size: 0.9375rem;
+            color: var(--clay-muted);
+            font-style: italic;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            color: var(--clay-foreground);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: transform 300ms ease;
+        }
+
+        .service-card:hover .service-features li {
+            transform: translateX(4px);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--clay-success);
+            font-weight: 900;
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+
+        .service-features li.highlight::before {
+            background: linear-gradient(135deg, var(--clay-accent), var(--clay-accent-alt));
+            color: white;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--clay-accent);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .service-link::after {
+            content: "→";
+            transition: transform 300ms ease;
+        }
+
+        .service-card:hover .service-link::after {
+            transform: translateX(6px);
+        }
+
+        /* Already Have Site Section */
+        .already-have-site {
+            padding: 32px 16px;
+            margin: 0 16px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 32px;
+            text-align: center;
+            box-shadow:
+                12px 12px 24px rgba(160, 150, 180, 0.15),
+                -8px -8px 16px rgba(255, 255, 255, 0.6);
+        }
+
+        .already-have-site h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--clay-foreground);
+        }
+
+        .already-have-site p {
+            color: var(--clay-muted);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .already-have-site a {
+            color: var(--clay-accent);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .already-have-site a:hover {
+            text-decoration: underline;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 48px 16px;
+            margin: 32px 16px 0;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 48px;
+            box-shadow:
+                20px 20px 40px rgba(160, 150, 180, 0.15),
+                -15px -15px 30px rgba(255, 255, 255, 0.6);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 24px;
+            transition: all 300ms ease;
+            box-shadow:
+                8px 8px 16px rgba(160, 150, 180, 0.1),
+                -6px -6px 12px rgba(255, 255, 255, 0.6);
+        }
+
+        .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                12px 12px 24px rgba(160, 150, 180, 0.15),
+                -8px -8px 16px rgba(255, 255, 255, 0.8);
+        }
+
+        .step-number {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #A78BFA, var(--clay-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            color: white;
+            box-shadow:
+                8px 8px 16px rgba(139, 92, 246, 0.25),
+                -4px -4px 8px rgba(255, 255, 255, 0.3);
+            transition: all 300ms ease;
+        }
+
+        .process-step:hover .step-number {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .step-content h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: var(--clay-foreground);
+        }
+
+        .step-content p {
+            color: var(--clay-muted);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 48px 16px;
+            text-align: center;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(219, 39, 119, 0.1));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 48px;
+            padding: 48px 24px;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                20px 20px 40px rgba(160, 150, 180, 0.2),
+                -15px -15px 30px rgba(255, 255, 255, 0.7);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-card h2 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: var(--clay-foreground);
+        }
+
+        .cta-card p {
+            color: var(--clay-muted);
+            margin-bottom: 28px;
+            font-size: 1.0625rem;
+            font-weight: 500;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #34D399, #10B981);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 20px;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 200ms ease;
+            box-shadow:
+                12px 12px 24px rgba(16, 185, 129, 0.3),
+                -8px -8px 16px rgba(255, 255, 255, 0.4),
+                inset 4px 4px 8px rgba(255, 255, 255, 0.3),
+                inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                16px 16px 32px rgba(16, 185, 129, 0.4),
+                -10px -10px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .whatsapp-btn:active {
+            transform: scale(0.92);
+        }
+
+        .whatsapp-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 16px;
+            text-align: center;
+            color: var(--clay-muted);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #34D399, #10B981);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 200ms ease;
+            z-index: 1000;
+            box-shadow:
+                10px 10px 20px rgba(16, 185, 129, 0.35),
+                -6px -6px 12px rgba(255, 255, 255, 0.4);
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.1);
+            box-shadow:
+                14px 14px 28px rgba(16, 185, 129, 0.45),
+                -8px -8px 16px rgba(255, 255, 255, 0.5);
+        }
+
+        .whatsapp-float:active {
+            transform: scale(0.92);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* Tablet and up */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .header-inner {
+                border-radius: 40px;
+                padding: 16px 24px;
+            }
+
+            .hero {
+                padding: 48px 24px 64px;
+            }
+
+            .hero-card {
+                border-radius: 60px;
+                padding: 64px 48px 72px;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .stats {
+                padding: 0 24px 64px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2.25rem;
+            }
+
+            .services {
+                padding: 64px 24px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
+
+            .already-have-site {
+                margin: 0 24px;
+                padding: 40px;
+            }
+
+            .process {
+                padding: 64px 48px;
+                margin: 32px 24px 0;
+            }
+
+            .process-steps {
+                flex-direction: row;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .process-step {
+                flex: 1;
+                flex-direction: column;
+                text-align: center;
+                max-width: 300px;
+                padding: 32px;
+            }
+
+            .step-number {
+                margin: 0 auto 16px;
+            }
+
+            .cta-section {
+                padding: 64px 24px;
+            }
+
+            .cta-card {
+                padding: 64px 56px;
+                border-radius: 60px;
+            }
+
+            .cta-card h2 {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-card {
+                padding: 40px 32px;
+            }
+        }
+
+        /* Large Desktop - 4 column grid */
+        @media (min-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+
+            .service-card {
+                padding: 32px 24px;
+            }
+
+            .service-card h3 {
+                font-size: 1.35rem;
+            }
+
+            .service-price {
+                font-size: 2rem;
+            }
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--clay-accent);
+            color: white;
+            padding: 8px 16px;
+            z-index: 200;
+            text-decoration: none;
+            border-radius: 0 0 20px 0;
+            font-weight: 700;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Background Blobs -->
+    <div class="blob-container" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <button class="menu-btn" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <path d="M3 12h18M3 6h18M3 18h18"/>
+                    </svg>
+                </button>
+                <a href="index.html" class="logo" aria-label="Shan Tech Services Home">
+                    Shan<span>Tech</span>
+                </a>
+                <a href="https://wa.me/447350308167" class="header-cta">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <div class="hero-badge">From just £39/month</div>
+                        <h1 id="hero-heading">Your business deserves to be <span class="gradient-text">found online</span></h1>
+                        <p>Simple, affordable websites and marketing for local businesses. No jargon, no fuss — just results.</p>
+                        <div class="hero-buttons">
+                            <a href="https://wa.me/447350308167" class="btn-primary" aria-label="Chat with us on WhatsApp">
+                                Let's chat
+                            </a>
+                            <a href="#services" class="btn-secondary">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                See packages
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats" aria-label="Our impact">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">£39</div>
+                        <div class="stat-label">Starting Price/mo</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7 days</div>
+                        <div class="stat-label">Average Delivery</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Mobile Friendly</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">WhatsApp Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 id="services-heading" class="section-title">Pick what works for you</h2>
+                <p class="section-subtitle">12-month commitment. Cancel anytime after.</p>
+                <div class="services-grid">
+                    <!-- Service 1: Launch Me -->
+                    <a href="launch-me.html" class="service-card tier-1" aria-labelledby="service1-title">
+                        <div class="service-icon" aria-hidden="true">🚀</div>
+                        <h3 id="service1-title">Launch Me</h3>
+                        <div class="service-price">£39/mo</div>
+                        <p class="service-price-note">12-month commitment</p>
+                        <p class="service-tagline">"Your complete online presence"</p>
+                        <ul class="service-features">
+                            <li>Professional website</li>
+                            <li>SEO optimised</li>
+                            <li>Testimonials section</li>
+                            <li>Pricing display</li>
+                            <li>About you & contact</li>
+                            <li>Mobile-friendly</li>
+                        </ul>
+                        <span class="service-link">Learn more</span>
+                    </a>
+
+                    <!-- Service 2: Book Me -->
+                    <a href="book-me.html" class="service-card tier-2 popular" aria-labelledby="service2-title">
+                        <span class="popular-badge">Popular</span>
+                        <div class="service-icon" aria-hidden="true">📅</div>
+                        <h3 id="service2-title">Book Me</h3>
+                        <div class="service-price">£59/mo</div>
+                        <p class="service-price-note">12-month commitment</p>
+                        <p class="service-tagline">"Let customers book you 24/7"</p>
+                        <ul class="service-features">
+                            <li>Everything in Launch Me</li>
+                            <li class="highlight">+ Online booking system</li>
+                            <li class="highlight">+ Calendar integration</li>
+                            <li class="highlight">+ Booking confirmations</li>
+                        </ul>
+                        <span class="service-link">Learn more</span>
+                    </a>
+
+                    <!-- Service 3: Level Up -->
+                    <a href="level-up.html" class="service-card tier-3" aria-labelledby="service3-title">
+                        <div class="service-icon" aria-hidden="true">📈</div>
+                        <h3 id="service3-title">Level Up</h3>
+                        <div class="service-price">£79/mo</div>
+                        <p class="service-price-note">12-month commitment</p>
+                        <p class="service-tagline">"Marketing Boost"</p>
+                        <ul class="service-features">
+                            <li>Everything in Book Me</li>
+                            <li class="highlight">+ 5 blogs/month OR</li>
+                            <li class="highlight">+ Social ads managed</li>
+                            <li class="highlight">You choose what works</li>
+                        </ul>
+                        <span class="service-link">Learn more</span>
+                    </a>
+
+                    <!-- Service 4: Get Me AI -->
+                    <a href="get-me-ai.html" class="service-card tier-4" aria-labelledby="service4-title">
+                        <div class="service-icon" aria-hidden="true">🤖</div>
+                        <h3 id="service4-title">Get Me AI</h3>
+                        <div class="service-price">£149/mo</div>
+                        <p class="service-price-note">12-month commitment</p>
+                        <p class="service-tagline">"Found everywhere, even by AI"</p>
+                        <ul class="service-features">
+                            <li>Everything in Level Up</li>
+                            <li class="highlight">+ AI search visibility</li>
+                            <li class="highlight">+ ChatGPT listing</li>
+                            <li class="highlight">+ Website chatbot</li>
+                        </ul>
+                        <span class="service-link">Learn more</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Already Have a Site -->
+        <section class="already-have-site" aria-labelledby="already-heading">
+            <h3 id="already-heading">Already have a website?</h3>
+            <p>We can host and manage your existing site.</p>
+            <a href="move-me-over.html">Move Me Over — from £10/month →</a>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process" aria-labelledby="process-heading">
+            <div class="container">
+                <h2 id="process-heading" class="section-title">How it works</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number" aria-hidden="true">1</div>
+                        <div class="step-content">
+                            <h3>Quick Chat</h3>
+                            <p>Tell us about your business. No pressure, just a friendly conversation.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number" aria-hidden="true">2</div>
+                        <div class="step-content">
+                            <h3>We Build It</h3>
+                            <p>Give us about a week. You'll see drafts and give feedback along the way.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number" aria-hidden="true">3</div>
+                        <div class="step-content">
+                            <h3>You're Live</h3>
+                            <p>Your website goes live. Customers can find you now.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2 id="cta-heading">Ready to get started?</h2>
+                        <p>Drop us a message on WhatsApp. We usually reply within a few hours.</p>
+                        <a href="https://wa.me/447350308167" class="whatsapp-btn" aria-label="Message us on WhatsApp">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Message us on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="about.html" style="color: var(--clay-accent); text-decoration: none; font-weight: 600;">About Me</a></p>
+            <p style="margin-top: 8px;">© 2026 Shan Tech Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/447350308167" class="whatsapp-float" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+</body>
+</html>
