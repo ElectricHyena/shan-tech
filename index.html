@@ -682,42 +682,100 @@
             transform: translateX(6px);
         }
 
-        /* Already Have Site Section */
+        /* Already Have Site Section - PRIMARY CTA */
         .already-have-site {
-            padding: 32px 16px;
-            margin: 0 16px;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            padding: 48px 24px;
+            margin: 48px 16px;
+            background: linear-gradient(135deg, var(--clay-accent) 0%, var(--clay-accent-alt) 100%);
             border-radius: 32px;
             text-align: center;
             box-shadow:
-                12px 12px 24px rgba(160, 150, 180, 0.15),
+                16px 16px 32px rgba(124, 58, 237, 0.3),
                 -8px -8px 16px rgba(255, 255, 255, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .already-have-site::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .already-have-site .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .already-have-site h3 {
             font-family: 'Nunito', sans-serif;
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-            color: var(--clay-foreground);
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+            color: white;
         }
 
         .already-have-site p {
-            color: var(--clay-muted);
-            font-size: 0.9375rem;
-            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.0625rem;
+            margin-bottom: 8px;
             font-weight: 500;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .already-have-site a {
+        .already-have-site .price-highlight {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            font-family: 'Nunito', sans-serif;
+            margin: 16px 0;
+        }
+
+        .already-have-site .price-highlight span {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .already-have-site a.cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
             color: var(--clay-accent);
+            padding: 16px 32px;
+            border-radius: 100px;
             font-weight: 700;
+            font-size: 1.0625rem;
             text-decoration: none;
+            margin-top: 16px;
+            transition: all 200ms ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         }
 
-        .already-have-site a:hover {
-            text-decoration: underline;
+        .already-have-site a.cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .already-have-site .subtext {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            margin-top: 16px;
         }
 
         /* Process Section */
@@ -978,8 +1036,16 @@
             }
 
             .already-have-site {
-                margin: 0 24px;
-                padding: 40px;
+                margin: 48px 24px;
+                padding: 56px 48px;
+            }
+
+            .already-have-site h3 {
+                font-size: 2rem;
+            }
+
+            .already-have-site .price-highlight {
+                font-size: 2.5rem;
             }
 
             .process {
@@ -1255,11 +1321,19 @@
             </div>
         </section>
 
-        <!-- Already Have a Site -->
+        <!-- Already Have a Site - PRIMARY OFFER -->
         <section class="already-have-site" aria-labelledby="already-heading">
-            <h3 id="already-heading">Already have a website?</h3>
-            <p>We can host and manage your existing site.</p>
-            <a href="move-me-over.html">Move Me Over — from £10/month →</a>
+            <div class="badge">Most Popular</div>
+            <h3 id="already-heading">Already paying for a website?</h3>
+            <p>You're probably paying too much. Let us take over your hosting and save you money.</p>
+            <div class="price-highlight">From £10<span>/month</span></div>
+            <a href="move-me-over.html" class="cta-button">
+                Switch & Save
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <p class="subtext">Same website. Same domain. Lower price.</p>
         </section>
 
         <!-- Process Section -->
