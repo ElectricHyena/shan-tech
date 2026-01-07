@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarke & Associates | Trusted Legal Advisors in Milton Keynes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #1E3A5F;
+            --primary-light: #2D5A8A;
+            --primary-dark: #152A45;
+            --gold: #C9A962;
+            --gold-light: #E5D4A8;
+            --cream: #FDFBF7;
+            --gray-100: #F5F5F5;
+            --gray-200: #E8E8E8;
+            --gray-400: #999999;
+            --gray-600: #666666;
+            --text: #2A2A2A;
+            --white: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Demo Banner */
+        .demo-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .demo-banner a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .demo-banner a:hover {
+            text-decoration: underline;
+        }
+
+        /* AI Badge */
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .ai-badge::before {
+            content: '🤖';
+            font-size: 0.875rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.02em;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+        }
+
+        nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+                gap: 32px;
+            }
+
+            nav a {
+                color: var(--text);
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: color 200ms ease;
+            }
+
+            nav a:hover {
+                color: var(--primary);
+            }
+        }
+
+        .header-cta {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 200ms ease;
+        }
+
+        .header-cta:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            padding: 80px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M30 30L0 0v60L30 30zm0 0l30-30v60L30 30z' fill='%23C9A962' fill-opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1.2fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .hero-text .ai-badge {
+            margin-bottom: 24px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.75rem;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-text h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        .hero-text h1 span {
+            color: var(--gold);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--gold-light);
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 200ms ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 32px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 200ms ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            gap: 24px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        .trust-badge-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* Hero Card - AI Features */
+        .hero-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .hero-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .hero-card-subtitle {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+
+        .ai-features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ai-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            background: var(--gray-100);
+            border-radius: 12px;
+            transition: all 200ms ease;
+        }
+
+        .ai-feature:hover {
+            background: var(--cream);
+            transform: translateX(4px);
+        }
+
+        .ai-feature-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .ai-feature-text h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .ai-feature-text p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 24px;
+            background: var(--cream);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--gray-600);
+            font-size: 1.05rem;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 300ms ease;
+            border: 1px solid var(--gray-200);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(30, 58, 95, 0.1);
+            border-color: var(--gold);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .service-link:hover {
+            text-decoration: underline;
+        }
+
+        /* AI Visibility Section */
+        .ai-visibility {
+            padding: 80px 24px;
+            background: var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-visibility::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+            opacity: 0.05;
+        }
+
+        .ai-visibility-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .ai-visibility-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .ai-visibility-text h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .ai-visibility-text h2 span {
+            color: var(--gold);
+        }
+
+        .ai-visibility-text p {
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+
+        .ai-platforms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .ai-platform {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .ai-platform-icon {
+            font-size: 1.1rem;
+        }
+
+        /* AI Chat Demo */
+        .ai-chat-demo {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+        }
+
+        .ai-chat-header {
+            background: var(--primary-dark);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ai-chat-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), #E5C77D);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .ai-chat-info h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .ai-chat-info span {
+            font-size: 0.8rem;
+            color: #10B981;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .ai-chat-info span::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #10B981;
+            border-radius: 50%;
+        }
+
+        .ai-chat-messages {
+            padding: 20px;
+            background: var(--gray-100);
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .chat-message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .chat-message.user {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-message.bot {
+            background: var(--white);
+            color: var(--text);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .chat-message.bot .typing {
+            display: flex;
+            gap: 4px;
+        }
+
+        .chat-message.bot .typing span {
+            width: 8px;
+            height: 8px;
+            background: var(--gray-400);
+            border-radius: 50%;
+            animation: typing 1s infinite;
+        }
+
+        .chat-message.bot .typing span:nth-child(2) { animation-delay: 0.2s; }
+        .chat-message.bot .typing span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .ai-chat-input {
+            padding: 16px 20px;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            gap: 12px;
+        }
+
+        .ai-chat-input input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .ai-chat-input input:focus {
+            border-color: var(--primary);
+        }
+
+        .ai-chat-input button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 200ms ease;
+        }
+
+        .ai-chat-input button:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 24px;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 32px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .testimonial-text {
+            color: var(--text);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .testimonial-info h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .testimonial-info span {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 48px 24px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand .logo-main {
+            color: white;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-section a {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            padding: 6px 0;
+            font-size: 0.9rem;
+            transition: color 200ms ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 32px;
+            margin-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Floating Chat Button */
+        .chat-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+        }
+
+        .chat-float-btn {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.4);
+            transition: all 200ms ease;
+            border: none;
+            position: relative;
+        }
+
+        .chat-float-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(30, 58, 95, 0.5);
+        }
+
+        .chat-float-btn::before {
+            content: '💬';
+            font-size: 28px;
+        }
+
+        .chat-float-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            background: #10B981;
+            border-radius: 50%;
+            border: 3px solid var(--white);
+        }
+
+        .chat-float-label {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: var(--white);
+            color: var(--text);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 200ms ease;
+        }
+
+        .chat-float:hover .chat-float-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chat-float-label::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 24px;
+            border: 6px solid transparent;
+            border-top-color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        This is a demo for the Get Me AI package — AI chatbot & AI search visibility.
+        <a href="../get-me-ai.html">← Learn more about Get Me AI</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="logo-main">Clarke & Associates</span>
+                <span class="logo-sub">Solicitors</span>
+            </a>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#ai">AI Assistant</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="header-cta">Free Consultation</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="ai-badge">AI-Powered</span>
+                    <h1>Expert Legal Advice, <span>Available 24/7</span></h1>
+                    <p>Trusted solicitors in Milton Keynes with over 25 years of experience. Now with instant AI assistance for quick answers to your legal questions.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            Book Consultation
+                        </a>
+                        <a href="#ai" class="btn-secondary">Try AI Assistant</a>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon">⚖️</div>
+                            <span>SRA Regulated</span>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon">🏆</div>
+                            <span>Award Winning</span>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon">⭐</div>
+                            <span>5-Star Rated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="hero-card-header">
+                            <div>
+                                <h3>AI-Enhanced Service</h3>
+                                <p class="hero-card-subtitle">What makes us different</p>
+                            </div>
+                            <span class="ai-badge">New</span>
+                        </div>
+                        <div class="ai-features">
+                            <div class="ai-feature">
+                                <div class="ai-feature-icon">💬</div>
+                                <div class="ai-feature-text">
+                                    <h4>24/7 AI Legal Assistant</h4>
+                                    <p>Get instant answers to common legal questions anytime, day or night.</p>
+                                </div>
+                            </div>
+                            <div class="ai-feature">
+                                <div class="ai-feature-icon">🔍</div>
+                                <div class="ai-feature-text">
+                                    <h4>Found by ChatGPT & AI</h4>
+                                    <p>When people ask AI for solicitors in Milton Keynes, we're recommended.</p>
+                                </div>
+                            </div>
+                            <div class="ai-feature">
+                                <div class="ai-feature-icon">⚡</div>
+                                <div class="ai-feature-text">
+                                    <h4>Instant Case Assessment</h4>
+                                    <p>AI helps us review your case faster for quicker response times.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="section-header">
+                <span class="section-label">Our Expertise</span>
+                <h2 class="section-title">Legal Services</h2>
+                <p class="section-subtitle">Comprehensive legal support for individuals and businesses across Milton Keynes and beyond.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Conveyancing</h3>
+                    <p>Buying, selling, or remortgaging? We handle all aspects of property transactions with care and precision.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Law</h3>
+                    <p>Sensitive support for divorce, child custody, prenuptial agreements, and all family matters.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📜</div>
+                    <h3>Wills & Probate</h3>
+                    <p>Protect your legacy with expertly drafted wills, lasting powers of attorney, and probate services.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Visibility Section -->
+        <section id="ai" class="ai-visibility">
+            <div class="ai-visibility-content">
+                <div class="ai-visibility-text">
+                    <h2>Found Everywhere — <span>Even by AI</span></h2>
+                    <p>When potential clients ask ChatGPT, Gemini, or other AI assistants for legal help in Milton Keynes, Clarke & Associates is recommended. That's the power of AI visibility.</p>
+                    <div class="ai-platforms">
+                        <span class="ai-platform"><span class="ai-platform-icon">🤖</span> ChatGPT</span>
+                        <span class="ai-platform"><span class="ai-platform-icon">✨</span> Google Gemini</span>
+                        <span class="ai-platform"><span class="ai-platform-icon">🔮</span> Claude</span>
+                        <span class="ai-platform"><span class="ai-platform-icon">🌐</span> Perplexity</span>
+                        <span class="ai-platform"><span class="ai-platform-icon">🍎</span> Siri</span>
+                    </div>
+                </div>
+                <div class="ai-chat-demo">
+                    <div class="ai-chat-header">
+                        <div class="ai-chat-avatar">⚖️</div>
+                        <div class="ai-chat-info">
+                            <h4>Clarke Legal AI</h4>
+                            <span>Online now</span>
+                        </div>
+                    </div>
+                    <div class="ai-chat-messages">
+                        <div class="chat-message user">
+                            Hi, I need help with a property purchase. What documents do I need?
+                        </div>
+                        <div class="chat-message bot">
+                            Hello! Great question. For a property purchase, you'll typically need: proof of identity (passport/driving licence), proof of address, proof of funds, and mortgage offer if applicable. Would you like me to arrange a free consultation with one of our conveyancing specialists?
+                        </div>
+                        <div class="chat-message user">
+                            Yes please, that would be helpful.
+                        </div>
+                        <div class="chat-message bot">
+                            Perfect! I've noted your interest. A member of our team will be in touch within 2 hours during office hours. In the meantime, is there anything else I can help you with?
+                        </div>
+                    </div>
+                    <div class="ai-chat-input">
+                        <input type="text" placeholder="Type your legal question...">
+                        <button>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials">
+            <div class="section-header">
+                <span class="section-label">Client Feedback</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The AI chatbot answered my initial questions at 11pm on a Sunday. By Monday morning, I had a callback scheduled. Incredibly efficient service."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RH</div>
+                        <div class="testimonial-info">
+                            <h4>Robert H.</h4>
+                            <span>Conveyancing Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I found them when I asked ChatGPT for recommended solicitors in MK. So glad I did — they handled my divorce with compassion and professionalism."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SW</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah W.</h4>
+                            <span>Family Law Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Modern firm with traditional values. The combination of personal service and AI tools means nothing falls through the cracks. Highly recommend."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JM</div>
+                        <div class="testimonial-info">
+                            <h4>James M.</h4>
+                            <span>Business Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Book a free 30-minute consultation with one of our expert solicitors. No obligation, just honest advice.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Book Free Consultation</a>
+                    <a href="#" class="btn-secondary">Call 01234 567890</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-main">Clarke & Associates</span>
+                    <span class="logo-sub">Solicitors</span>
+                </a>
+                <p>Trusted legal advisors serving Milton Keynes and surrounding areas for over 25 years. SRA regulated.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="#">Conveyancing</a>
+                <a href="#">Family Law</a>
+                <a href="#">Wills & Probate</a>
+                <a href="#">Commercial Law</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Our Team</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="#">01234 567890</a>
+                <a href="#">info@clarkelaw.co.uk</a>
+                <a href="#">45 High Street, MK1 1AA</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Clarke & Associates Solicitors. Authorised and regulated by the Solicitors Regulation Authority (SRA No. 123456).</p>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <div class="chat-float">
+        <span class="chat-float-label">Ask our AI Legal Assistant</span>
+        <button class="chat-float-btn" onclick="document.getElementById('ai').scrollIntoView({behavior: 'smooth'})"></button>
+    </div>
+</body>
+</html>
