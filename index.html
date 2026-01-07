@@ -682,6 +682,36 @@
             transform: translateX(6px);
         }
 
+        .service-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .demo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--clay-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 14px;
+            background: rgba(124, 58, 237, 0.08);
+            border-radius: 100px;
+            transition: all 200ms ease;
+        }
+
+        .demo-link:hover {
+            background: rgba(124, 58, 237, 0.15);
+            color: var(--clay-accent);
+        }
+
+        .demo-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
         /* Already Have Site Section - PRIMARY CTA */
         .already-have-site {
             padding: 48px 24px;
@@ -1252,7 +1282,7 @@
                 <p class="section-subtitle">12-month commitment. Cancel anytime after.</p>
                 <div class="services-grid">
                     <!-- Service 1: Launch Me -->
-                    <a href="launch-me.html" class="service-card tier-1" aria-labelledby="service1-title">
+                    <div class="service-card tier-1" aria-labelledby="service1-title">
                         <div class="service-icon" aria-hidden="true">🚀</div>
                         <h3 id="service1-title">Launch Me</h3>
                         <div class="service-price">£39/mo</div>
@@ -1266,11 +1296,20 @@
                             <li>About you & contact</li>
                             <li>Mobile-friendly</li>
                         </ul>
-                        <span class="service-link">Learn more</span>
-                    </a>
+                        <div class="service-actions">
+                            <a href="launch-me.html" class="service-link">Learn more</a>
+                            <a href="demos/handyman.html" class="demo-link" onclick="event.stopPropagation();">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                See Demo
+                            </a>
+                        </div>
+                    </div>
 
                     <!-- Service 2: Book Me -->
-                    <a href="book-me.html" class="service-card tier-2 popular" aria-labelledby="service2-title">
+                    <div class="service-card tier-2 popular" aria-labelledby="service2-title">
                         <span class="popular-badge">Popular</span>
                         <div class="service-icon" aria-hidden="true">📅</div>
                         <h3 id="service2-title">Book Me</h3>
@@ -1283,8 +1322,17 @@
                             <li class="highlight">+ Calendar integration</li>
                             <li class="highlight">+ Booking confirmations</li>
                         </ul>
-                        <span class="service-link">Learn more</span>
-                    </a>
+                        <div class="service-actions">
+                            <a href="book-me.html" class="service-link">Learn more</a>
+                            <a href="demos/spa-booking.html" class="demo-link" onclick="event.stopPropagation();">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                See Demo
+                            </a>
+                        </div>
+                    </div>
 
                     <!-- Service 3: Level Up -->
                     <a href="level-up.html" class="service-card tier-3" aria-labelledby="service3-title">
