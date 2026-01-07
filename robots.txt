@@ -1,0 +1,11 @@
+# Robots.txt for Shan Tech Services
+# https://shantech.services
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://shantech.services/sitemap.xml
+
+# LLMs.txt for AI assistants
+# See https://shantech.services/llms.txt for AI-readable business information
