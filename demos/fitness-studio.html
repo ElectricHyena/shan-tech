@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peak Fitness Studio | Personal Training in Milton Keynes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #FF4D4D;
+            --primary-dark: #E63939;
+            --secondary: #1A1A2E;
+            --accent: #FFD93D;
+            --dark: #0F0F1A;
+            --gray-100: #F7F7F8;
+            --gray-200: #E8E8EC;
+            --gray-400: #9999A8;
+            --gray-600: #5C5C6D;
+            --white: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--secondary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+
+        /* Demo Banner */
+        .demo-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .demo-banner a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .demo-banner a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: var(--dark);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.75rem;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+                gap: 32px;
+            }
+
+            nav a {
+                color: var(--gray-400);
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: color 200ms ease;
+            }
+
+            nav a:hover {
+                color: var(--white);
+            }
+        }
+
+        .header-cta {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 200ms ease;
+        }
+
+        .header-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            padding: 80px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-text h1 {
+                font-size: 5rem;
+            }
+        }
+
+        .hero-text h1 span {
+            color: var(--primary);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 200ms ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 77, 77, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 32px;
+            border: 2px solid var(--gray-600);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 200ms ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Stats Row */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .hero-card-badge {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero-card h3 {
+            font-size: 1.75rem;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .hero-card-price {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+        }
+
+        .hero-card-price strong {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .class-schedule {
+            margin-top: 20px;
+        }
+
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-day {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+        }
+
+        .schedule-time {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .schedule-spots {
+            background: rgba(255, 77, 77, 0.2);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .schedule-spots.full {
+            background: rgba(255,255,255,0.1);
+            color: var(--gray-400);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 24px;
+            background: var(--gray-100);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--gray-600);
+            font-size: 1.05rem;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 300ms ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 300ms ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 1.75rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .service-price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .service-price span {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--gray-400);
+        }
+
+        /* Blog Section - KEY FEATURE FOR LEVEL UP */
+        .blog {
+            padding: 80px 24px;
+            background: var(--white);
+        }
+
+        .blog-header {
+            max-width: 1200px;
+            margin: 0 auto 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .blog-header-text h2 {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .blog-header-text p {
+            color: var(--gray-600);
+        }
+
+        .blog-view-all {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 200ms ease;
+        }
+
+        .blog-view-all:hover {
+            gap: 12px;
+        }
+
+        .blog-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .blog-featured {
+            background: var(--gray-100);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .blog-featured-image {
+            height: 240px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .blog-featured-image::before {
+            content: '💪';
+            font-size: 64px;
+            opacity: 0.5;
+        }
+
+        .blog-featured-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .blog-featured-content {
+            padding: 32px;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 0.85rem;
+            color: var(--gray-400);
+        }
+
+        .blog-featured-content h3 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .blog-featured-content p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .blog-read-more {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-read-more:hover {
+            text-decoration: underline;
+        }
+
+        .blog-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .blog-small {
+            background: var(--gray-100);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 300ms ease;
+        }
+
+        .blog-small:hover {
+            background: var(--gray-200);
+        }
+
+        .blog-small .blog-meta {
+            margin-bottom: 12px;
+        }
+
+        .blog-small h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .blog-small p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Social Proof / Ads Section */
+        .social-proof {
+            padding: 60px 24px;
+            background: var(--secondary);
+        }
+
+        .social-proof-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .social-proof h3 {
+            font-size: 1.5rem;
+            color: var(--gray-400);
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .social-proof h3 span {
+            color: var(--white);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all 200ms ease;
+        }
+
+        .social-icon:hover {
+            color: var(--white);
+            transform: translateY(-4px);
+        }
+
+        .social-icon-circle {
+            width: 64px;
+            height: 64px;
+            border: 2px solid var(--gray-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 200ms ease;
+        }
+
+        .social-icon:hover .social-icon-circle {
+            border-color: var(--primary);
+            background: rgba(255, 77, 77, 0.1);
+        }
+
+        .social-icon span {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 24px;
+            background: var(--gray-100);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .testimonial-rating {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: var(--secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .testimonial-info h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .testimonial-info span {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 24px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta h2 span {
+            color: var(--primary);
+        }
+
+        .cta p {
+            color: var(--gray-400);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--gray-400);
+            padding: 48px 24px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-section h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.25rem;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--gray-400);
+            text-decoration: none;
+            padding: 6px 0;
+            font-size: 0.9rem;
+            transition: color 200ms ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 32px;
+            margin-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.85rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gray-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all 200ms ease;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        This is a demo website for the Level Up package — includes blog & social ads.
+        <a href="../level-up.html">← Learn more about Level Up</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                PEAK<span>FITNESS</span>
+            </a>
+            <nav>
+                <a href="#services">Programs</a>
+                <a href="#blog">Blog</a>
+                <a href="#testimonials">Results</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#cta" class="header-cta">Start Free Trial</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>TRANSFORM YOUR <span>BODY</span> & MIND</h1>
+                    <p>Personal training and group classes designed to push your limits. Expert coaches, proven results, real community.</p>
+                    <div class="hero-buttons">
+                        <a href="#cta" class="btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                            Start Free Trial
+                        </a>
+                        <a href="#services" class="btn-secondary">View Programs</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Expert Coaches</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="hero-card-header">
+                            <div>
+                                <h3>HIIT BURN CLASS</h3>
+                                <p class="hero-card-price">From <strong>£15</strong> per class</p>
+                            </div>
+                            <span class="hero-card-badge">Popular</span>
+                        </div>
+                        <div class="class-schedule">
+                            <div class="schedule-item">
+                                <span class="schedule-day">Monday</span>
+                                <span class="schedule-time">6:30 AM</span>
+                                <span class="schedule-spots">3 spots left</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-day">Wednesday</span>
+                                <span class="schedule-time">7:00 PM</span>
+                                <span class="schedule-spots">5 spots left</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-day">Friday</span>
+                                <span class="schedule-time">6:30 AM</span>
+                                <span class="schedule-spots full">Full</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-day">Saturday</span>
+                                <span class="schedule-time">9:00 AM</span>
+                                <span class="schedule-spots">8 spots left</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="section-header">
+                <span class="section-label">Our Programs</span>
+                <h2 class="section-title">TRAINING FOR EVERY GOAL</h2>
+                <p class="section-subtitle">Whether you want to lose weight, build muscle, or boost your endurance — we've got you covered.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏋️</div>
+                    <h3>PERSONAL TRAINING</h3>
+                    <p>One-on-one sessions tailored to your goals. Custom workout plans, nutrition guidance, and accountability.</p>
+                    <div class="service-price">£45 <span>/ session</span></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>GROUP CLASSES</h3>
+                    <p>High-energy classes including HIIT, spin, boxing, and yoga. Motivation through community.</p>
+                    <div class="service-price">£15 <span>/ class</span></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>12-WEEK TRANSFORM</h3>
+                    <p>Complete body transformation program. Training, nutrition, weekly check-ins, and ongoing support.</p>
+                    <div class="service-price">£599 <span>/ program</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section - KEY LEVEL UP FEATURE -->
+        <section id="blog" class="blog">
+            <div class="blog-header">
+                <div class="blog-header-text">
+                    <h2>LATEST FROM THE BLOG</h2>
+                    <p>Tips, workouts, and inspiration to fuel your fitness journey.</p>
+                </div>
+                <a href="#" class="blog-view-all">View all posts →</a>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-featured">
+                    <div class="blog-featured-image">
+                        <span class="blog-featured-badge">Featured</span>
+                    </div>
+                    <div class="blog-featured-content">
+                        <div class="blog-meta">
+                            <span>📅 Jan 5, 2026</span>
+                            <span>⏱️ 5 min read</span>
+                        </div>
+                        <h3>5 MISTAKES KILLING YOUR GAINS (AND HOW TO FIX THEM)</h3>
+                        <p>You're putting in the work but not seeing results? These common training mistakes could be holding you back. Learn how to optimize your workouts for maximum muscle growth...</p>
+                        <a href="#" class="blog-read-more">Read full article →</a>
+                    </div>
+                </div>
+                <div class="blog-sidebar">
+                    <div class="blog-small">
+                        <div class="blog-meta">
+                            <span>📅 Jan 3, 2026</span>
+                        </div>
+                        <h4>The Ultimate Pre-Workout Meal Guide</h4>
+                        <p>What you eat before training can make or break your session. Here's exactly what to eat and when...</p>
+                    </div>
+                    <div class="blog-small">
+                        <div class="blog-meta">
+                            <span>📅 Dec 28, 2025</span>
+                        </div>
+                        <h4>New Year, New You: Setting Goals That Stick</h4>
+                        <p>Why 80% of resolutions fail by February — and the science-backed method to make yours last...</p>
+                    </div>
+                    <div class="blog-small">
+                        <div class="blog-meta">
+                            <span>📅 Dec 20, 2025</span>
+                        </div>
+                        <h4>Home Workout: No Equipment Full Body Burn</h4>
+                        <p>Can't make it to the gym? This 30-minute routine will torch calories and build strength anywhere...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof / Marketing -->
+        <section class="social-proof">
+            <div class="social-proof-inner">
+                <h3>Follow us for <span>daily workouts, tips & motivation</span></h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <div class="social-icon-circle">📸</div>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <div class="social-icon-circle">📘</div>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <div class="social-icon-circle">🎵</div>
+                        <span>TikTok</span>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <div class="social-icon-circle">▶️</div>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials">
+            <div class="section-header">
+                <span class="section-label">Real Results</span>
+                <h2 class="section-title">WHAT OUR MEMBERS SAY</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Lost 15kg in 12 weeks on the Transform program. The coaches pushed me when I wanted to quit. Best decision I ever made for my health."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JT</div>
+                        <div class="testimonial-info">
+                            <h4>James T.</h4>
+                            <span>12-Week Transform</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"The HIIT classes are addictive! Great music, amazing energy, and I've never felt stronger. The online booking makes it so easy to plan my week."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SR</div>
+                        <div class="testimonial-info">
+                            <h4>Sophie R.</h4>
+                            <span>Group Classes Member</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"As a complete beginner, I was nervous. My PT made me feel comfortable from day one. Now I'm lifting weights I never thought possible!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MK</div>
+                        <div class="testimonial-info">
+                            <h4>Michael K.</h4>
+                            <span>Personal Training</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="cta">
+            <div class="cta-content">
+                <h2>READY TO <span>START</span>?</h2>
+                <p>Your first class is on us. No commitment, no pressure — just come see what Peak Fitness is all about.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Claim Free Class</a>
+                    <a href="#" class="btn-secondary">Book a Tour</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    PEAK<span>FITNESS</span>
+                </a>
+                <p>Milton Keynes' premier fitness studio. Transform your body, elevate your mind, join our community.</p>
+            </div>
+            <div class="footer-section">
+                <h4>PROGRAMS</h4>
+                <a href="#">Personal Training</a>
+                <a href="#">Group Classes</a>
+                <a href="#">12-Week Transform</a>
+                <a href="#">Corporate Wellness</a>
+            </div>
+            <div class="footer-section">
+                <h4>COMPANY</h4>
+                <a href="#">About Us</a>
+                <a href="#">Our Coaches</a>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-section">
+                <h4>CONTACT</h4>
+                <a href="#">01234 567890</a>
+                <a href="#">hello@peakfitness.co.uk</a>
+                <a href="#">123 Gym Street, MK1 1AA</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Peak Fitness Studio. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#">📸</a>
+                <a href="#">📘</a>
+                <a href="#">🎵</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

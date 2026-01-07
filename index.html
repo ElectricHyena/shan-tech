@@ -1335,7 +1335,7 @@
                     </div>
 
                     <!-- Service 3: Level Up -->
-                    <a href="level-up.html" class="service-card tier-3" aria-labelledby="service3-title">
+                    <div class="service-card tier-3" aria-labelledby="service3-title">
                         <div class="service-icon" aria-hidden="true">📈</div>
                         <h3 id="service3-title">Level Up</h3>
                         <div class="service-price">£79/mo</div>
@@ -1347,8 +1347,17 @@
                             <li class="highlight">+ Social ads managed</li>
                             <li class="highlight">You choose what works</li>
                         </ul>
-                        <span class="service-link">Learn more</span>
-                    </a>
+                        <div class="service-actions">
+                            <a href="level-up.html" class="service-link">Learn more</a>
+                            <a href="demos/fitness-studio.html" class="demo-link" onclick="event.stopPropagation();">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                See Demo
+                            </a>
+                        </div>
+                    </div>
 
                     <!-- Service 4: Get Me AI -->
                     <a href="get-me-ai.html" class="service-card tier-4" aria-labelledby="service4-title">
