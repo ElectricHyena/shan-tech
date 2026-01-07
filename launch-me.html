@@ -361,6 +361,32 @@
             margin: 0 auto;
         }
 
+        .demo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            padding: 12px 24px;
+            background: var(--clay-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: all 200ms ease;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .demo-btn:hover {
+            background: var(--clay-accent-alt);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(219, 39, 119, 0.3);
+        }
+
+        .demo-btn svg {
+            flex-shrink: 0;
+        }
+
         /* Features Section */
         .features {
             padding: 48px 16px;
@@ -952,6 +978,13 @@
                         <div class="hero-price">£39/month</div>
                         <p class="hero-price-note">12-month commitment</p>
                         <p class="hero-tagline">"Your complete online presence"</p>
+                        <a href="demos/handyman.html" class="demo-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            See Demo
+                        </a>
                     </div>
                 </div>
             </div>
