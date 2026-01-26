@@ -38,7 +38,7 @@ Website for Shan Tech Services - a web design business targeting small local bus
 | Book Me | £29/mo | Service businesses needing online booking |
 | Level Up | £39/mo | Businesses ready for marketing (blogs/ads) |
 | Get Me AI | £99/mo | Forward-thinking businesses wanting AI visibility |
-| Move Me Over | From £19/mo | Existing sites needing hosting |
+| Move Me Over | From £9/mo | Existing sites needing hosting |
 
 All tiers: 12-month commitment, domain cost separate.
 
