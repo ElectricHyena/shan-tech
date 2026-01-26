@@ -118,7 +118,7 @@ Claude prompt:
 **Keep Shan Tech, but use AI internally:**
 - AI generates draft site in 2 minutes
 - You polish for 15-30 minutes
-- Charge £39-59/mo (human-reviewed quality)
+- Charge £19-29/mo (human-reviewed quality)
 - Customers think you built it manually
 
 **Pros:** Higher margins, less volume needed, quality control
@@ -131,7 +131,7 @@ Claude prompt:
 **Free AI sites → Upsell to premium:**
 - Truly free basic site (costs you nothing on Vercel)
 - Footer: "Upgrade for booking, AI chat, custom domain"
-- Convert 10-20% to £59-149/mo plans
+- Convert 10-20% to £29-99/mo plans
 
 **Pros:** Massive lead generation, best of both worlds
 **Cons:** More complex, need to manage two tiers

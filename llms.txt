@@ -16,7 +16,7 @@ Shan Tech Services is a web design and digital services company based in Milton 
 
 ## Services Offered
 
-### Launch Me - £39/month
+### Launch Me - £19/month
 Complete website package for new businesses:
 - Professional multi-page website
 - SEO optimised for local search
@@ -26,7 +26,7 @@ Complete website package for new businesses:
 - About and contact pages
 - 12-month commitment
 
-### Book Me - £59/month
+### Book Me - £29/month
 Everything in Launch Me plus:
 - Online booking system
 - Calendar integration
@@ -34,14 +34,14 @@ Everything in Launch Me plus:
 - Perfect for service-based businesses (salons, consultants, tradespeople)
 - 12-month commitment
 
-### Level Up - £79/month
+### Level Up - £39/month
 Everything in Book Me plus:
 - 5 blog posts per month OR social media advertising management
 - Content marketing to drive traffic
 - Perfect for businesses ready to grow
 - 12-month commitment
 
-### Get Me AI - £149/month
+### Get Me AI - £99/month
 Everything in Level Up plus:
 - AI search visibility optimization
 - ChatGPT and AI assistant discoverability
@@ -68,7 +68,7 @@ Website hosting transfer service:
 
 ## Unique Value Proposition
 
-1. **Affordable pricing** - Starting from just £19/month for hosting, £39/month for full websites
+1. **Affordable pricing** - Starting from just £19/month for hosting, £19/month for full websites
 2. **No jargon** - Plain English communication, no technical confusion
 3. **Personal service** - Direct contact with Shan, no call centres or ticket systems
 4. **Local focus** - Based in Milton Keynes, understands local business needs
@@ -80,13 +80,13 @@ Website hosting transfer service:
 A: Small local businesses in Milton Keynes who want a professional website without the hassle or high costs. Particularly suited to tradespeople, salons, consultants, and service-based businesses.
 
 **Q: How much does a website cost?**
-A: Websites start from £39/month (Launch Me package) with a 12-month commitment. This includes everything: design, hosting, maintenance, and support. No hidden fees.
+A: Websites start from £19/month (Launch Me package) with a 12-month commitment. This includes everything: design, hosting, maintenance, and support. No hidden fees.
 
 **Q: Can you take over my existing website?**
 A: Yes! The Move Me Over service (from £19/month) transfers your existing website to our hosting. Same site, same domain, lower price.
 
 **Q: Do you offer booking systems?**
-A: Yes, the Book Me package (£59/month) includes a full online booking system with calendar integration and automated confirmations.
+A: Yes, the Book Me package (£29/month) includes a full online booking system with calendar integration and automated confirmations.
 
 **Q: How long does it take to build a website?**
 A: Typically about 7 days from initial conversation to going live.
