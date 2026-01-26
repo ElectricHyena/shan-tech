@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>£4.99 Automated Website Business - Strategic Plan 2026</title>
+    <style>
+        :root {
+            --primary: #7C3AED;
+            --secondary: #DB2777;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --dark: #1F2937;
+            --light: #F4F1FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--warning);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--light);
+        }
+
+        h3 {
+            color: var(--dark);
+            margin: 25px 0 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+        }
+
+        tr:hover {
+            background: var(--light);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid var(--warning);
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid var(--success);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .code-block {
+            background: var(--dark);
+            color: #10B981;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+            white-space: pre;
+            line-height: 1.8;
+        }
+
+        .architecture-diagram {
+            background: linear-gradient(135deg, #1F2937, #374151);
+            color: #10B981;
+            padding: 25px;
+            border-radius: 12px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            white-space: pre;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .cost-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .cost-card {
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cost-card.winner {
+            border-color: var(--success);
+            background: linear-gradient(135deg, #d1fae5, #ffffff);
+        }
+
+        .cost-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .cost-card .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .cost-card.winner .price {
+            color: var(--success);
+        }
+
+        .cost-card .per-site {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .timeline-item h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .profit-calc {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .profit-item {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .profit-item.total {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .profit-item .label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .profit-item .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 15px 0 15px 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .tier-card {
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tier-card.featured {
+            border-color: var(--primary);
+            position: relative;
+        }
+
+        .tier-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .tier-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .tier-card .tier-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .tier-card .tier-price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .tier-card ul {
+            text-align: left;
+            margin: 20px 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        .tier-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tier-card li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .architecture-diagram {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>£4.99 Automated Website Business</h1>
+        <p>Zero-Touch AI-Powered Website Generation at Scale</p>
+        <span class="badge">Strategic Plan 2026</span>
+    </header>
+
+    <div class="container">
+
+        <!-- Executive Summary -->
+        <section>
+            <h2>Executive Summary</h2>
+            <p>This document outlines a fully automated website business model that leverages AI and cloud infrastructure to deliver professional websites at £4.99/month with 94% profit margins.</p>
+
+            <div class="highlight">
+                <strong>The Core Insight:</strong> Platforms like Vercel are just wrappers around AWS/GCP. By going directly to cloud infrastructure (specifically Cloudflare R2), hosting costs drop to near-zero, enabling a sustainable £4.99/month price point that undercuts everyone while maintaining healthy margins.
+            </div>
+
+            <h3>The Problem with Current Pricing</h3>
+            <ul>
+                <li><strong>Shan Tech current pricing:</strong> £19-39/month struggles against loss-leaders</li>
+                <li><strong>Bluehost (via Free Website Guys):</strong> £1.49/month × 36 months = £53.64 total</li>
+                <li><strong>The gap:</strong> We appear 10-12x more expensive on paper</li>
+            </ul>
+
+            <h3>The Solution</h3>
+            <p>Build a fully automated pipeline where:</p>
+            <ul>
+                <li>Customer fills a form</li>
+                <li>AI generates the website content</li>
+                <li>System auto-deploys to near-free hosting</li>
+                <li>Stripe handles billing automatically</li>
+                <li>AI chatbot handles support</li>
+                <li><strong>You do nothing.</strong></li>
+            </ul>
+        </section>
+
+        <!-- The Real Hosting Costs -->
+        <section>
+            <h2>The Real Hosting Costs Exposed</h2>
+            <p>Here's what hosting ACTUALLY costs when you go direct to cloud providers (for 1,000 sites):</p>
+
+            <div class="cost-comparison">
+                <div class="cost-card">
+                    <h4>AWS S3 + CloudFront</h4>
+                    <div class="price">£73</div>
+                    <div class="per-site">£0.073 per site/month</div>
+                    <p style="margin-top:10px;font-size:0.9rem;color:#666;">Storage: $1.15 | Bandwidth: $85</p>
+                </div>
+
+                <div class="cost-card">
+                    <h4>GCP Cloud Storage + CDN</h4>
+                    <div class="price">£80</div>
+                    <div class="per-site">£0.08 per site/month</div>
+                    <p style="margin-top:10px;font-size:0.9rem;color:#666;">Requires Load Balancer (+$18)</p>
+                </div>
+
+                <div class="cost-card winner">
+                    <h4>Cloudflare R2 + Workers</h4>
+                    <div class="price">£1</div>
+                    <div class="per-site">£0.001 per site/month</div>
+                    <p style="margin-top:10px;font-size:0.9rem;color:#666;">Zero egress fees = game changer</p>
+                </div>
+
+                <div class="cost-card">
+                    <h4>Vercel (for comparison)</h4>
+                    <div class="price">£0-16</div>
+                    <div class="per-site">Free tier limits apply</div>
+                    <p style="margin-top:10px;font-size:0.9rem;color:#666;">May hit limits at scale</p>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h3>Why Cloudflare R2 Wins</h3>
+                <p><strong>AWS/GCP charge $0.08-0.09 per GB of bandwidth. Cloudflare charges $0.</strong></p>
+                <br>
+                <p>For 1,000 sites with 1GB traffic each:</p>
+                <ul>
+                    <li>AWS CloudFront: $85/month</li>
+                    <li>Cloudflare: $0/month</li>
+                </ul>
+                <p><strong>That $85 difference IS your entire profit margin at £4.99 pricing.</strong></p>
+            </div>
+
+            <h3>Detailed Cost Breakdown: Cloudflare R2</h3>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Usage (1,000 sites)</th>
+                    <th>Cost/Month</th>
+                </tr>
+                <tr>
+                    <td>R2 Storage</td>
+                    <td>50GB (50MB × 1,000 sites)</td>
+                    <td>$0.75</td>
+                </tr>
+                <tr>
+                    <td>R2 Class A Operations</td>
+                    <td>100k writes (builds/updates)</td>
+                    <td>$0.45</td>
+                </tr>
+                <tr>
+                    <td>R2 Class B Operations</td>
+                    <td>10M reads (page views)</td>
+                    <td>FREE</td>
+                </tr>
+                <tr>
+                    <td>Workers</td>
+                    <td>Routing requests</td>
+                    <td>FREE (100k/day)</td>
+                </tr>
+                <tr>
+                    <td>CDN/Bandwidth</td>
+                    <td>Unlimited</td>
+                    <td>FREE</td>
+                </tr>
+                <tr>
+                    <td>DNS</td>
+                    <td>Unlimited zones</td>
+                    <td>FREE</td>
+                </tr>
+                <tr>
+                    <td>SSL Certificates</td>
+                    <td>Unlimited</td>
+                    <td>FREE</td>
+                </tr>
+                <tr style="background: #d1fae5; font-weight: bold;">
+                    <td>TOTAL</td>
+                    <td>1,000 sites</td>
+                    <td>~$1.20 (£1)</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- System Architecture -->
+        <section>
+            <h2>System Architecture</h2>
+
+            <h3>High-Level Flow</h3>
+            <div class="code-block">Customer fills form → AI generates site → Auto-deploys → Stripe bills → You do nothing</div>
+
+            <h3>Complete Architecture Diagram</h3>
+            <div class="architecture-diagram">┌────────────────────────────────────────────────────────────────┐
+│                     LEAD GENERATION LAYER                       │
+├────────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
+│  │ Maps Scraper │  │ FB Ads       │  │ SEO Content  │         │
+│  │ (n8n)        │  │ (Auto)       │  │ (AI Blog)    │         │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘         │
+│         └─────────────────┼─────────────────┘                  │
+│                           ▼                                    │
+│                    ┌──────────────┐                            │
+│                    │ Lead Queue   │                            │
+│                    │ (DynamoDB)   │                            │
+│                    └──────┬───────┘                            │
+│                           ▼                                    │
+│                    ┌──────────────┐                            │
+│                    │ AI Outreach  │ → Personalized emails      │
+│                    │ (Claude)     │ → Sample site previews     │
+│                    └──────────────┘                            │
+└────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────────────┐
+│                     CONVERSION LAYER                            │
+├────────────────────────────────────────────────────────────────┤
+│                    ┌──────────────┐                            │
+│                    │ Landing Page │                            │
+│                    │ + Quiz Form  │                            │
+│                    └──────┬───────┘                            │
+│                           ▼                                    │
+│                    ┌──────────────┐                            │
+│                    │ Claude API   │ → Generate full site       │
+│                    └──────┬───────┘                            │
+│                           ▼                                    │
+│                    ┌──────────────┐                            │
+│                    │ Preview URL  │ → "Love it? £4.99/mo"      │
+│                    └──────┬───────┘                            │
+│                           ▼                                    │
+│                    ┌──────────────┐                            │
+│                    │ Stripe       │ → Payment                  │
+│                    └──────────────┘                            │
+└────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────────────┐
+│                     HOSTING LAYER (Cloudflare)                  │
+├────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  R2 Bucket: /sites/{customer-id}/                              │
+│       │                                                         │
+│       ▼                                                         │
+│  Cloudflare Workers: Route by subdomain                        │
+│       │                                                         │
+│       ▼                                                         │
+│  Cloudflare CDN: Global distribution (FREE)                    │
+│       │                                                         │
+│       ▼                                                         │
+│  SSL: Automatic (FREE)                                         │
+│                                                                 │
+│  customer.yourbrand.com → R2/sites/customer/                   │
+│                                                                 │
+└────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────────────┐
+│                     AI OPERATIONS LAYER                         │
+├────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
+│  │ AI Support   │  │ AI Updates   │  │ AI Optimize  │         │
+│  │ Agent        │  │ (monthly)    │  │ (weekly)     │         │
+│  │              │  │              │  │              │         │
+│  │ WhatsApp     │  │ Social pull  │  │ Analytics    │         │
+│  │ integration  │  │ Content gen  │  │ A/B testing  │         │
+│  │ Site changes │  │ Auto-deploy  │  │ Improvements │         │
+│  └──────────────┘  └──────────────┘  └──────────────┘         │
+│                                                                 │
+└────────────────────────────────────────────────────────────────┘</div>
+
+            <h3>Tech Stack Components</h3>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Technology</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td>Form/Quiz</td>
+                    <td>Tally or Typeform</td>
+                    <td>Free tier</td>
+                </tr>
+                <tr>
+                    <td>Automation</td>
+                    <td>n8n (self-hosted) or AWS Lambda</td>
+                    <td>~£10-20/mo</td>
+                </tr>
+                <tr>
+                    <td>AI Content Generation</td>
+                    <td>Claude API (Anthropic)</td>
+                    <td>~£0.05/site</td>
+                </tr>
+                <tr>
+                    <td>Static Site Framework</td>
+                    <td>Astro or 11ty</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Build Pipeline</td>
+                    <td>GitHub Actions</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>Cloudflare R2</td>
+                    <td>~£0.001/site</td>
+                </tr>
+                <tr>
+                    <td>CDN + SSL + DNS</td>
+                    <td>Cloudflare</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Payments</td>
+                    <td>Stripe</td>
+                    <td>1.4% + 20p</td>
+                </tr>
+                <tr>
+                    <td>AI Support</td>
+                    <td>Claude via WhatsApp API</td>
+                    <td>~£0.01/conversation</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Alternative AWS Architecture -->
+        <section>
+            <h2>Alternative: Pure AWS Architecture</h2>
+            <p>If you prefer AWS over Cloudflare for compliance, familiarity, or integration reasons:</p>
+
+            <div class="architecture-diagram">┌─────────────────────────────────────────────────────────┐
+│                    CUSTOMER FLOW                        │
+├─────────────────────────────────────────────────────────┤
+│  Form (Tally) → API Gateway → Lambda → Step Functions   │
+│                                            │            │
+│                         ┌──────────────────┴──────┐     │
+│                         ▼                         ▼     │
+│                   Claude API              DynamoDB      │
+│                   (generate)              (metadata)    │
+│                         │                               │
+│                         ▼                               │
+│                   CodeBuild                             │
+│                   (build site)                          │
+│                         │                               │
+│                         ▼                               │
+│                   S3 Bucket                             │
+│                   /sites/{customer-id}/                 │
+│                         │                               │
+│                         ▼                               │
+│                   CloudFront                            │
+│                   (CDN + SSL)                           │
+│                         │                               │
+│                         ▼                               │
+│              *.sites.yourdomain.com                     │
+└─────────────────────────────────────────────────────────┘</div>
+
+            <h3>AWS Costs (1,000 sites)</h3>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Usage</th>
+                    <th>Cost/Month</th>
+                </tr>
+                <tr>
+                    <td>S3 Storage</td>
+                    <td>50GB</td>
+                    <td>$1.15</td>
+                </tr>
+                <tr>
+                    <td>S3 PUT Requests</td>
+                    <td>Builds</td>
+                    <td>~$0.50</td>
+                </tr>
+                <tr>
+                    <td>CloudFront</td>
+                    <td>1TB transfer</td>
+                    <td>$85.00</td>
+                </tr>
+                <tr>
+                    <td>Lambda</td>
+                    <td>10k invocations</td>
+                    <td>~$0.20</td>
+                </tr>
+                <tr>
+                    <td>API Gateway</td>
+                    <td>10k requests</td>
+                    <td>~$3.50</td>
+                </tr>
+                <tr>
+                    <td>DynamoDB</td>
+                    <td>1GB, light use</td>
+                    <td>~$1.00</td>
+                </tr>
+                <tr>
+                    <td>CodeBuild</td>
+                    <td>100 build-mins</td>
+                    <td>~$0.50</td>
+                </tr>
+                <tr>
+                    <td>Route 53</td>
+                    <td>1 hosted zone</td>
+                    <td>$0.50</td>
+                </tr>
+                <tr style="background: #fef3c7; font-weight: bold;">
+                    <td>TOTAL</td>
+                    <td></td>
+                    <td>~$92 (£73)</td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <strong>Note:</strong> AWS costs 73x more than Cloudflare R2 primarily due to CloudFront bandwidth charges ($85/month). At £4.99 pricing, this significantly impacts margins but is still viable. AWS makes more sense if you need tight integration with other AWS services or have compliance requirements.
+            </div>
+        </section>
+
+        <!-- Kubernetes Considerations -->
+        <section>
+            <h2>Where Does Kubernetes Fit?</h2>
+
+            <div class="two-column">
+                <div>
+                    <h3>Use Kubernetes For:</h3>
+                    <ul>
+                        <li>n8n automation platform</li>
+                        <li>Customer dashboard/portal</li>
+                        <li>API services</li>
+                        <li>Preview environments</li>
+                        <li>Build queue workers</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Don't Use Kubernetes For:</h3>
+                    <ul>
+                        <li>Serving static files (use R2/S3)</li>
+                        <li>CDN functionality (use Cloudflare/CloudFront)</li>
+                        <li>SSL termination (handled by CDN)</li>
+                        <li>DNS (use Cloudflare/Route53)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Hybrid Architecture with K8s</h3>
+            <div class="architecture-diagram">K8s Cluster (EKS/GKE) ~£100-150/mo:
+├── n8n (automation workflows)
+├── API service (custom logic)
+├── Build workers (generate sites)
+└── Customer dashboard (portal)
+
+External (NOT in K8s):
+├── Cloudflare R2 (static file storage)
+├── Cloudflare CDN (global delivery)
+├── Cloudflare DNS (domain management)
+└── Stripe (billing)</div>
+
+            <div class="highlight">
+                <strong>Verdict:</strong> For MVP, skip Kubernetes. A single EC2/VPS with Docker Compose is sufficient. Add K8s later when you need the customer dashboard, complex workflows, or want autoscaling.
+            </div>
+        </section>
+
+        <!-- Unit Economics -->
+        <section>
+            <h2>Unit Economics at £4.99</h2>
+
+            <h3>Per-Site Monthly Breakdown</h3>
+            <div class="profit-calc">
+                <div class="profit-item">
+                    <div class="label">Revenue</div>
+                    <div class="value">£4.99</div>
+                </div>
+                <div class="profit-item">
+                    <div class="label">Cloudflare R2</div>
+                    <div class="value">-£0.001</div>
+                </div>
+                <div class="profit-item">
+                    <div class="label">Claude API (amortized)</div>
+                    <div class="value">-£0.02</div>
+                </div>
+                <div class="profit-item">
+                    <div class="label">Stripe Fees</div>
+                    <div class="value">-£0.27</div>
+                </div>
+                <div class="profit-item total">
+                    <div class="label">NET PROFIT</div>
+                    <div class="value">£4.70</div>
+                </div>
+            </div>
+
+            <p style="text-align: center; font-size: 1.2rem; margin: 20px 0;"><strong>Profit Margin: 94%</strong></p>
+
+            <h3>Scale Projections</h3>
+            <table>
+                <tr>
+                    <th>Customers</th>
+                    <th>Monthly Revenue</th>
+                    <th>Monthly Profit</th>
+                    <th>Your Time</th>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>£499</td>
+                    <td>£470</td>
+                    <td>2 hrs/week</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>£2,495</td>
+                    <td>£2,350</td>
+                    <td>2 hrs/week</td>
+                </tr>
+                <tr>
+                    <td>1,000</td>
+                    <td>£4,990</td>
+                    <td>£4,700</td>
+                    <td>3 hrs/week</td>
+                </tr>
+                <tr>
+                    <td>2,000</td>
+                    <td>£9,980</td>
+                    <td>£9,400</td>
+                    <td>5 hrs/week</td>
+                </tr>
+                <tr>
+                    <td>5,000</td>
+                    <td>£24,950</td>
+                    <td>£23,500</td>
+                    <td>10 hrs/week</td>
+                </tr>
+            </table>
+
+            <div class="success-box">
+                <h3>Comparison: Free Website Guys Model</h3>
+                <p>They get one-time Bluehost affiliate commission: ~£65 per customer, then nothing.</p>
+                <p><strong>After 14 months, your £4.70/month recurring beats their £65 one-time.</strong></p>
+                <p>Plus: You own the customer relationship. They disappear after the sale.</p>
+            </div>
+        </section>
+
+        <!-- AI-Era Innovations -->
+        <section>
+            <h2>AI-Era Innovations</h2>
+            <p>Here's what's possible now that wasn't before:</p>
+
+            <h3>1. Self-Evolving Websites</h3>
+            <div class="code-block">Monthly AI Agent runs:
+├── Scrapes customer's Instagram/Facebook
+├── Identifies new content (posts, photos, reviews)
+├── AI generates new sections/updates
+├── Auto-deploys updated site
+└── Notifies customer: "We freshened up your site!"</div>
+            <p>Customer does nothing. Site stays fresh. This is VALUE worth paying for.</p>
+
+            <h3>2. AI Support That Makes Real Changes</h3>
+            <div class="code-block">Customer: "Can you add a new service - Hot Stone Massage, £60?"
+    ↓
+AI Agent:
+├── Parses request
+├── Generates service description
+├── Updates site JSON/content
+├── Triggers rebuild & deploy
+├── Replies: "Done! Check it out: [link]"</div>
+            <p>Not just answering questions - actually making changes. Game-changing support.</p>
+
+            <h3>3. AI Lead Generation Machine</h3>
+            <div class="code-block">Daily automated workflow:
+├── Scrape Google Maps: "hairdresser near Milton Keynes"
+├── Check each for website quality (Lighthouse audit)
+├── For businesses with bad/no website:
+│   ├── AI generates THEIR site preview automatically
+│   ├── Sends email: "We made this for you. Free preview."
+│   └── Link to claim it (payment activates)
+└── Track engagement, follow up automatically</div>
+            <p><strong>The site EXISTS before they even ask.</strong> Zero friction conversion.</p>
+
+            <h3>4. AI Optimization Loop</h3>
+            <div class="code-block">Weekly automated process:
+├── Pull analytics data
+├── AI analyzes: "Homepage bounce rate 70%, slow load time"
+├── AI generates improvement suggestions
+├── Implements and A/B tests automatically
+├── Winner becomes default
+└── Reports to customer: "We improved your site conversion by 15%"</div>
+
+            <h3>5. Voice-Activated Site Management</h3>
+            <div class="code-block">Customer sends WhatsApp voice note:
+"Hey, we're closed next Monday for a holiday"
+    ↓
+AI transcribes → Understands intent → Updates site → Confirms via message</div>
+        </section>
+
+        <!-- Pricing Tiers -->
+        <section>
+            <h2>Recommended Pricing Tiers</h2>
+
+            <div class="cost-comparison">
+                <div class="tier-card">
+                    <h4>Starter</h4>
+                    <div class="tier-price">£4.99<span>/mo</span></div>
+                    <ul>
+                        <li>AI-generated website</li>
+                        <li>Subdomain (you.brand.com)</li>
+                        <li>AI support chatbot</li>
+                        <li>SSL certificate</li>
+                        <li>Global CDN</li>
+                    </ul>
+                </div>
+
+                <div class="tier-card featured">
+                    <h4>Growth</h4>
+                    <div class="tier-price">£9.99<span>/mo</span></div>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Custom domain included</li>
+                        <li>Monthly AI content refresh</li>
+                        <li>Basic analytics</li>
+                        <li>Social media links</li>
+                    </ul>
+                </div>
+
+                <div class="tier-card">
+                    <h4>Pro</h4>
+                    <div class="tier-price">£9.99<span>/mo</span></div>
+                    <ul>
+                        <li>Everything in Growth</li>
+                        <li>Booking widget</li>
+                        <li>Advanced analytics</li>
+                        <li>AI site optimization</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Timeline -->
+        <section>
+            <h2>Implementation Timeline</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Phase 1: MVP (Weeks 1-2)</h4>
+                    <ul>
+                        <li>Create 3 Astro templates (salon, café, tradesperson)</li>
+                        <li>Set up n8n workflow: Form → Claude → Template</li>
+                        <li>Configure Cloudflare R2 bucket</li>
+                        <li>Manual Stripe payment links</li>
+                        <li>Test with 5-10 free beta users</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Phase 2: Automation (Weeks 3-4)</h4>
+                    <ul>
+                        <li>Stripe webhook integration (auto-activate on payment)</li>
+                        <li>Automated welcome emails</li>
+                        <li>Subdomain routing via Cloudflare Workers</li>
+                        <li>Customer notification system</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Phase 3: AI Operations (Weeks 5-6)</h4>
+                    <ul>
+                        <li>AI support chatbot (WhatsApp + web)</li>
+                        <li>Monthly site refresh automation</li>
+                        <li>Lead scraping pipeline</li>
+                        <li>Automated outreach system</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Phase 4: Scale (Ongoing)</h4>
+                    <ul>
+                        <li>Add more industry templates</li>
+                        <li>Custom domain support</li>
+                        <li>Analytics integration</li>
+                        <li>A/B testing automation</li>
+                        <li>Customer dashboard (consider K8s here)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <strong>Total Build Time:</strong> ~40-60 hours<br>
+                <strong>Cash Investment:</strong> Under £50 to launch<br>
+                <strong>Time to First Revenue:</strong> 2-3 weeks
+            </div>
+        </section>
+
+        <!-- Risk Mitigation -->
+        <section>
+            <h2>Risk Mitigation</h2>
+
+            <table>
+                <tr>
+                    <th>Risk</th>
+                    <th>Mitigation Strategy</th>
+                </tr>
+                <tr>
+                    <td>AI generates poor content</td>
+                    <td>Human review step initially; improve prompts with feedback; industry-specific prompt tuning</td>
+                </tr>
+                <tr>
+                    <td>Templates look too similar</td>
+                    <td>Create 10+ variants; randomize elements (colors, layouts, fonts); allow customization</td>
+                </tr>
+                <tr>
+                    <td>Support overwhelm</td>
+                    <td>AI chatbot handles 90%; clear limitations in ToS; tiered support based on plan</td>
+                </tr>
+                <tr>
+                    <td>Low conversion rate</td>
+                    <td>A/B test landing pages; improve onboarding; reduce friction to preview</td>
+                </tr>
+                <tr>
+                    <td>High churn rate</td>
+                    <td>Add stickiness (custom domain, email, content updates); monthly value delivery</td>
+                </tr>
+                <tr>
+                    <td>Competition copies model</td>
+                    <td>Focus on niche/local markets; build brand; superior AI features; customer relationships</td>
+                </tr>
+                <tr>
+                    <td>Cloudflare pricing changes</td>
+                    <td>Architecture works with AWS S3 as fallback; margins still viable at higher costs</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Conclusion -->
+        <section>
+            <h2>Conclusion: Is This Worth Pursuing?</h2>
+
+            <div class="success-box">
+                <h3>YES, if you want:</h3>
+                <ul>
+                    <li>Passive income that compounds (recurring revenue)</li>
+                    <li>A scalable business (same effort for 100 or 1,000 customers)</li>
+                    <li>To leverage AI before competitors catch on</li>
+                    <li>To build an asset (vs trading time for money)</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>Consider carefully if:</h3>
+                <ul>
+                    <li>You need immediate large income (this needs volume to scale)</li>
+                    <li>You prefer high-touch client relationships</li>
+                    <li>You're not comfortable with technical implementation</li>
+                </ul>
+            </div>
+
+            <h3>The Bottom Line</h3>
+            <p>The "Free Website Guys" make money from Bluehost affiliate commissions (£65 one-time). You can make MORE money by:</p>
+            <ol>
+                <li><strong>Keeping the hosting revenue yourself</strong> (not giving to Bluehost)</li>
+                <li><strong>Building recurring revenue</strong> (not one-time affiliate)</li>
+                <li><strong>Using AI to eliminate labor costs</strong></li>
+                <li><strong>Using Cloudflare R2 to eliminate infrastructure costs</strong></li>
+            </ol>
+
+            <p style="font-size: 1.2rem; margin-top: 20px;"><strong>This is a viable path to £5,000+/month passive income within 12 months.</strong></p>
+        </section>
+
+        <!-- Next Steps -->
+        <section>
+            <h2>Recommended Next Steps</h2>
+            <ol>
+                <li><strong>Validate demand:</strong> Create a simple landing page, run £50 in Facebook ads, see if people sign up for waitlist</li>
+                <li><strong>Build MVP:</strong> One template, one industry, manual Stripe links - prove the pipeline works</li>
+                <li><strong>Get 10 beta customers:</strong> Free or heavily discounted, gather feedback</li>
+                <li><strong>Automate billing:</strong> Stripe webhooks to activate/deactivate sites</li>
+                <li><strong>Add AI support:</strong> Reduce your time involvement to near-zero</li>
+                <li><strong>Scale marketing:</strong> Facebook ads, SEO content, viral footer loop</li>
+            </ol>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Strategic Document - January 2026</p>
+        <p>Shan Tech Services - Low-Touch Automation Business Model</p>
+    </footer>
+</body>
+</html>
